@@ -7,6 +7,7 @@ import routerAuth from "./routers/auth.routes.js";
 import cors from "cors";
 import routerUser from "./routers/user.routes.js";
 import postRoutes from "./routers/post.routes.js";
+import adminRouter from "./routers/admin.routes.js";
 
 
 
@@ -22,6 +23,7 @@ app.use("/api/auth", routerAuth)
 app.use("/api/foto", uploadRouter)
 app.use("/api/users", routerUser)
 app.use("/api/post", postRoutes)
+app.use("/api/admin", adminRouter)
 
 app.get('/tidak', (req, res) => {
     res.send('Hello World!');

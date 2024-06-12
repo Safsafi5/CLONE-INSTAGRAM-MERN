@@ -10,7 +10,7 @@ routerAuth.post("/activated", activate);
 routerAuth.post("/refreshToken", refreshToken);
 routerAuth.post("/login", login);
 routerAuth.post("/forgotPassword", forgotPassword);
-routerAuth.post("/resetPassword",auth, resetPassword);
+routerAuth.post("/resetPassword",protecRoute, resetPassword);
 routerAuth.post("/logout", logOut);
 routerAuth.get("/getMe",protecRoute, getMe);
 

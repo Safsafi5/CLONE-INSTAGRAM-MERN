@@ -16,8 +16,6 @@ postRoutes.post("/like/:id",protecRoute, likedUnlikedPost)
 postRoutes.post("/save/:id",protecRoute, savedUnsavedPost)
 postRoutes.post("/postsId/:id",protecRoute, commentPost)
 
-// postRoutes.post("/postsId/:postId/commentId/:commentId/subcomment", protecRoute, subComment);
-
 postRoutes.post("/postsId/:postId/commentId/:commentId/subcomment/:subCommentId?/:subCommentId?", protecRoute, subComment);
 
 

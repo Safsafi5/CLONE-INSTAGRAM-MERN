@@ -102,6 +102,20 @@ export const editPassword = async (req, res) => {
   }
 }; 
 
+
+export const editProfile1 = async (req, res) => {
+  try {
+    const {username, email, bio} = req.body
+    await User.findOneAndUpdate(
+      {_id: req.user.id},{username, email, bio}
+    )
+    res.json({msg: "Success"})
+  } catch (error) {
+    
+  }
+}
+
+
 export const editProfile = async (req, res) => {
   try {
     const { username, email, bio } = req.body;
